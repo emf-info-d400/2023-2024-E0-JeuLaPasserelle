@@ -1,11 +1,15 @@
 # Evaluation diagnostique N°0 : Le jeu "La Passerelle"
+
 ## Durée : 120'
-## Objectifs :
+
+## Objectifs
+
 L'objectif visé par cette évaluation diagnostique est de faire une _radiographie de la situation d'apprentissage de l'apprenti_.
 
 Le but est d'identifier les sujets qui ne serait pas encore compris/maîtrisés, de déterminer le niveau d'acquisition des compétences de l'apprenant et d'identifier ses éventuelles difficultés et zones d'ombre.
 
 Les sujets abordés dans cette évaluation diagnostique sont :
+
 - Révision des concepts vus jusqu'ici
 - Création de classes répondant à des besoins décrits
 - Fabrication et utilisation d‘objets
@@ -14,12 +18,14 @@ Les sujets abordés dans cette évaluation diagnostique sont :
 - Compréhension du `null`
 - Compréhension d'une directive donnée en partie sous forme de diagrammes UML et en partie sous forme de consignes en français  
 
-
 # Mission
+
 ## Explications générales
+
 Vous travaillez sur la réalisation d'un petit jeu vidéo en Java. Celui-ci ne fonctionne pour l'instant que sur la console.
 
 Ce jeu multi-joueur dénommé **"La passerelle"** consiste en :
+
 - **Un joueur** (issu de la classe `Joueur`), c'est à dire vous-même que vous pourrez créer avec le nom que vous souhaiterez lui donner.
 - **Plusieurs ennemis** (également des instances de la classe `Joueur`), qui représenteront vos adversaires et qui devront être créés en respectant les indications fournies.
 - **Une passerelle** composée de nombreuses **planches** (issues de la classe `Planche`) reliant les deux côtés d'une vertigineuse falaise que les joueurs vont tenter de franchir les premiers pour remporter la partie. Une planche ne peut accueillir qu'un seul joueur à la fois. Une plance peut aussi, éventuellement, être piégée.
@@ -57,7 +63,7 @@ Pour les autres joueurs, donnez-leur les noms suivants : `"Terminator"`, `"Chuck
     4.1 Pour chaque joueur présent dans la liste des joueurs
 
     - 4.1.1 si le joueur est collé sur place
-    
+
         - alors le décoller
 
     - sinon
@@ -65,8 +71,8 @@ Pour les autres joueurs, donnez-leur les noms suivants : `"Terminator"`, `"Chuck
         - a) le joueur utilisera le savoir-faire du dé `DeA6Faces` pour déterminer son avancement propre.
 
         - b) si la position du joueur dépasse la dernière planche de la passerelle
-        
-            - alors **il sera déclaré gagnant du jeu** qui s'arrêtera (on fera un `return`). En effet, ce joueur aura réussi l'exploit de survivre à la traversée du précipice en réussissant à se rendre de l'autre côté de cette vertigineuse falaise. 
+
+            - alors **il sera déclaré gagnant du jeu** qui s'arrêtera (on fera un `return`). En effet, ce joueur aura réussi l'exploit de survivre à la traversée du précipice en réussissant à se rendre de l'autre côté de cette vertigineuse falaise.
 
         - c) si le joueur finit sur une planche libre, c'est-à-dire qui n'est pas encore occupée par un joueur, il occupera cette position-là.
 
@@ -85,15 +91,17 @@ Pour les autres joueurs, donnez-leur les noms suivants : `"Terminator"`, `"Chuck
             - `COLLE`, un effet négatif :  le joueur sur la planche restera collé sur place au prochain tour, tour qu'il ne pourra donc pas effectuer. Pour réaliser cela, il suffit d'indiquer cela dans l'état du joueur concerné.  
 
             - `HUILE`, un effet super positif :  le joueur va glisser en avant sur les planches de la passerelle tant qu'il ne butera pas contre un autre joueur présent devant lui, mais il glissera d'au maximum de 10 cases.
-            
+
                 **✋⛔️ NE PAS IMPLEMENTER LE COMPORTEMENT `HUILE` CI-DESSUS.**
                   Ne le faire que si tout le reste a été fait tip-top et que ça fonctionne (inutile pour comprendre où vous en êtes avec cette matière).  
                   Cette fonctionnalité sera réalisée après le corrigé en commun de cette évaluation diagnostique. Vous aurez l'occasion de corriger votre travail et y apporter cette fonctionnalité supplémentaire, sous forme d'exercice cette fois-ci.
-        
+
     - N.B. Toutes les opérations réalisées dans l'ensemble du pt 4.1 seront affichées de manière lisible sur la console afin qu'on puisse voir l'évolution du jeu. Consulter l'exemple fourni ci-dessous pour savoir comment formater l'affichage sur la console.
 
 ## Diagrammes UML fournis
+
 ### Diagramme UML des classes du package `app`
+
 Vous trouverez ci-dessous toutes les indications nécessaires pour réaliser la carcasse des classes de votre application ainsi que pour leur donner les fonctionnalités désirées.
 
 Pour l'implémentation précise de ces fonctionnalités, référez-vous aux descriptions fournies ci-dessus, respectivement aux autres diagrammes UML fournis.
@@ -107,7 +115,9 @@ namespace app {
     }
 }
 ```
+
 ### Diagramme UML des classes du package `services`
+
 Vous trouverez ci-dessous toutes les indications nécessaires pour réaliser la carcasse des classes de votre application ainsi que pour leur donner les fonctionnalités désirées.
 
 Pour l'implémentation précise de ces fonctionnalités, référez-vous aux descriptions fournies ci-dessus, respectivement aux autres diagrammes UML fournis.
@@ -122,7 +132,9 @@ namespace services {
 }
 
 ```
+
 ### Diagramme UML des classes du package `models`
+
 Vous trouverez ci-dessous toutes les indications nécessaires pour réaliser la carcasse des classes de votre application ainsi que pour leur donner les fonctionnalités désirées.
 
 Pour l'implémentation précise de ces fonctionnalités, référez-vous aux descriptions fournies ci-dessus, respectivement aux autres diagrammes UML fournis.
@@ -190,7 +202,7 @@ namespace models {
     }
 }
 
-note for Jeu "Pour ces 3 attributs, attention à bien faire des\nconstantes Java comme appris au module 319"
+note for Jeu "Pour ces 3 attributs, attention à bien faire des<br>constantes Java comme appris au module 319"
 
 DeA6Faces ..> "utise" GenerateurAleatoire
 
@@ -217,11 +229,12 @@ sequenceDiagram
     main()->>System.out : println("Le jeu est terminé !")
 ```
 
-
 ## Affichage sur la console
+
 Voici quelques résultats de parties affichées sur la console, afin que vous compreniez ce que vous devez afficher :
 
 **Partie 1**
+
 ```
 Le jeu va débuter...
  - Un piège COLLE est posé sur la planche N°11
@@ -288,6 +301,7 @@ Le jeu est terminé !
 ```
 
 **Partie 2**
+
 ```
 Le jeu va débuter...
  - Un piège CHUTE est posé sur la planche N°7
@@ -378,6 +392,7 @@ Le jeu est terminé !
 ```
 
 **Partie 3**
+
 ```
 Le jeu va débuter...
  - Un piège HUILE est posé sur la planche N°17
@@ -424,12 +439,15 @@ Le jeu va débuter...
 'Bruce Lee' gagne la partie !!!
 Le jeu est terminé !
 ```
+
 # Restitution
+
 Lorsque vous êtes prêt, faites un `commit` de votre travail.
 
 Vous demanderez préalablement l'autorisation au prof avant de remettre le réseau et de faire un `push` sur votre repository github-classroom.
 
 # Exercice
+
 Cette évaluation diagnostique a été réalisée en classe, vous vous y êtes confrontés, vous l'avez faite et rendue et celle-ci a ensuite été corrigée en classe par le prof.
 
 Vous allez maintenant pouvoir apporter les corrections nécessaires à votre projet pour qu'il fonctionne comme prévu.
