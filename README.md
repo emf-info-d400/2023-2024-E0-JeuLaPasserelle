@@ -58,7 +58,7 @@ Pour les autres joueurs, donnez-leur les noms suivants : `"Terminator"`, `"Chuck
 
     3.2 Choisir aléatoirement l'un des 3 types possibles de piège et créer ce piège, de ce type, à cette position qu'on sait être libre et mettre le piège en place sur la bonne planche de la passerelle.
 
-4. Ensuite, répéter à jamais :  
+4. Ensuite, répéter à toujours :  
 
     4.1 Pour chaque joueur présent dans la liste des joueurs
 
