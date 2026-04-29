@@ -222,11 +222,11 @@ Planche o--> "0..1" Piege : piege
 title: Diagramme de séquence de Application.main()
 ---
 sequenceDiagram
-    main()->>System.out : println("Le jeu va débuter...")
+    main->>System.out : println("Le jeu va débuter...")
     create participant Jeu jeu
-    main()-->>Jeu jeu : <<creation>>
-    main()->>+Jeu jeu : demarrerLeJeuLaPasserelle()
-    main()->>System.out : println("Le jeu est terminé !")
+    main-->>Jeu jeu : <<creation>>
+    main->>+Jeu jeu : demarrerLeJeuLaPasserelle()
+    main->>System.out : println("Le jeu est terminé !")
 ```
 
 ## Affichage sur la console
